@@ -23,8 +23,10 @@ aeroways = []
 waterways = []
 lakes = []
 buildings = []
-leisure_areas = []
 man_made_objects = []
+
+landuses_areas = {}
+leisure_areas = {}
 
 boundaries = []
 
@@ -60,6 +62,11 @@ color_per_landuse_type = {
 color_per_leisure_type = {
     "park": "green",
     "garden": "green",
+    "pitch": "green",
+    "playground": "green",
+    "minature_golf": None,
+    "nature_reserve": "green",
+    "sports_centre": None,
     }
 
 color_and_width_per_waterway_type = {
@@ -118,8 +125,6 @@ color_and_width_per_highway_type = {
     # For horses
     "bridleway": ("brown", 0.3),
 }
-
-landuses_areas = {}
 
 plot_count = 0
 PLOT_LIMIT = 15000
@@ -446,9 +451,9 @@ if True:
 if True:
     for area_lists, color_table in ((landuses_areas, color_per_landuse_type),
                                     (leisure_areas, color_per_leisure_type)):
-    for (area_type, area_list) in area_lists.iteritems():
-        if area_list and area_type in color_table:
-            plot_areas_from_entity_list(area_list, color_table[area_type])
+        for (area_type, area_list) in area_lists.iteritems():
+            if area_list and area_type in color_table:
+                plot_areas_from_entity_list(area_list, color_table[area_type])
 
 if False:
     from matplotlib.patches import Polygon
