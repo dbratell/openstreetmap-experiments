@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="CGImap 0.6.0 (16061 thorn-03.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+ <bounds minlat="58.4099100" minlon="15.6115400" maxlat="58.4112100" maxlon="15.6145800"/>
+ <node id="100572" visible="true" version="5" changeset="45841064" timestamp="2017-02-05T22:02:31Z" user="riiga" uid="83501" lat="58.4111838" lon="15.6129953"/>
+ <node id="100576" visible="true" version="6" changeset="39473748" timestamp="2016-05-21T17:53:33Z" user="riiga" uid="83501" lat="58.4115384" lon="15.6162073"/>
+ <node id="152194" visible="true" version="4" changeset="45841064" timestamp="2017-02-05T22:02:31Z" user="riiga" uid="83501" lat="58.4096153" lon="15.6138464">
+  <tag k="highway" v="turning_circle"/>
+ </node>
+ <node id="152195" visible="true" version="4" changeset="45841064" timestamp="2017-02-05T22:02:31Z" user="riiga" uid="83501" lat="58.4094246" lon="15.6125417"/>
+ <node id="7052023" visible="true" version="5" changeset="45841064" timestamp="2017-02-05T22:02:31Z" user="riiga" uid="83501" lat="58.4114108" lon="15.6150657"/>
+ <node id="306682704" visible="true" version="5" changeset="45841064" timestamp="2017-02-05T22:02:31Z" user="riiga" uid="83501" lat="58.4112757" lon="15.6127239">
+  <tag k="highway" v="turning_circle"/>
+ </node>
+ <node id="336458899" visible="true" version="3" changeset="45841064" timestamp="2017-02-05T22:02:32Z" user="riiga" uid="83501" lat="58.4107694" lon="15.6115211"/>
+ <node id="336467912" visible="true" version="4" changeset="45841064" timestamp="2017-02-05T22:02:32Z" user="riiga" uid="83501" lat="58.4094287" lon="15.6120098"/>
+ <node id="336467914" visible="true" version="4" changeset="45841064" timestamp="2017-02-05T22:02:32Z" user="riiga" uid="83501" lat="58.4094716" lon="15.6123071"/>
+ <node id="336467916" visible="true" version="4" changeset="45841064" timestamp="2017-02-05T22:02:32Z" user="riiga" uid="83501" lat="58.4103456" lon="15.6118486"/>
+ <node id="336467917" visible="true" version="3" changeset="45841064" timestamp="2017-02-05T22:02:32Z" user="riiga" uid="83501" lat="58.4111544" lon="15.6127594"/>
+ <node id="336467918" visible="true" version="3" changeset="45841064" timestamp="2017-02-05T22:02:32Z" user="riiga" uid="83501" lat="58.4112424" lon="15.6124652"/>
+ <node id="336467920" visible="true" version="5" changeset="45841064" timestamp="2017-02-05T22:02:32Z" user="riiga" uid="83501" lat="58.4105669" lon="15.6117357"/>
+ <node id="336467923" visible="true" version="5" changeset="45841064" timestamp="2017-02-05T22:02:32Z" user="riiga" uid="83501" lat="58.4105902" lon="15.6114019"/>
+ <node id="338449488" visible="true" version="6" changeset="45841064" timestamp="2017-02-05T22:02:32Z" user="riiga" uid="83501" lat="58.4094763" lon="15.6125132"/>
+ <node id="338449491" visible="true" version="5" changeset="45841064" timestamp="2017-02-05T22:02:32Z" user="riiga" uid="83501" lat="58.4103543" lon="15.6120533"/>
+ <node id="338449498" visible="true" version="4" changeset="45841064" timestamp="2017-02-05T22:02:32Z" user="riiga" uid="83501" lat="58.4115830" lon="15.6150807"/>
+ <node id="338449501" visible="true" version="4" changeset="45726049" timestamp="2017-02-01T20:04:40Z" user="riiga" uid="83501" lat="58.4110271" lon="15.6161034"/>
+ <node id="338449504" visible="true" version="4" changeset="45841064" timestamp="2017-02-05T22:02:32Z" user="riiga" uid="83501" lat="58.4106204" lon="15.6133658"/>
+ <node id="338449507" visible="true" version="3" changeset="34756627" timestamp="2015-10-20T14:30:03Z" user="riiga" uid="83501" lat="58.4096891" lon="15.6138755"/>
+ <node id="339026640" visible="true" version="3" changeset="45841064" timestamp="2017-02-05T22:02:34Z" user="riiga" uid="83501" lat="58.4118117" lon="15.6146200"/>
+ <node id="339026641" visible="true" version="3" changeset="45841064" timestamp="2017-02-05T22:02:34Z" user="riiga" uid="83501" lat="58.4117091" lon="15.6145674"/>
+ <node id="339026642" visible="true" version="3" changeset="45841064" timestamp="2017-02-05T22:02:34Z" user="riiga" uid="83501" lat="58.4115207" lon="15.6145933"/>
+ <node id="339026643" visible="true" version="3" changeset="45841064" timestamp="2017-02-05T22:02:34Z" user="riiga" uid="83501" lat="58.4113419" lon="15.6129618"/>
+ <node id="339026651" visible="true" version="3" changeset="45841064" timestamp="2017-02-05T22:02:34Z" user="riiga" uid="83501" lat="58.4117564" lon="15.6150442"/>
+ <node id="339026653" visible="true" version="3" changeset="45841064" timestamp="2017-02-05T22:02:34Z" user="riiga" uid="83501" lat="58.4115356" lon="15.6159069"/>
+ <node id="339026655" visible="true" version="4" changeset="45841064" timestamp="2017-02-05T22:02:34Z" user="riiga" uid="83501" lat="58.4109634" lon="15.6152048"/>
+ <node id="339026656" visible="true" version="3" changeset="45841064" timestamp="2017-02-05T22:02:34Z" user="riiga" uid="83501" lat="58.4111434" lon="15.6151606"/>
+ <node id="339026657" visible="true" version="3" changeset="45841064" timestamp="2017-02-05T22:02:34Z" user="riiga" uid="83501" lat="58.4109910" lon="15.6138322"/>
+ <node id="339026659" visible="true" version="3" changeset="45841064" timestamp="2017-02-05T22:02:34Z" user="riiga" uid="83501" lat="58.4113533" lon="15.6124545"/>
+ <node id="339026660" visible="true" version="2" changeset="45841064" timestamp="2017-02-05T22:02:34Z" user="riiga" uid="83501" lat="58.4106978" lon="15.6117661"/>
+ <node id="339026661" visible="true" version="2" changeset="34756627" timestamp="2015-10-20T14:30:06Z" user="riiga" uid="83501" lat="58.4111378" lon="15.6119145"/>
+ <node id="339026662" visible="true" version="3" changeset="45841064" timestamp="2017-02-05T22:02:34Z" user="riiga" uid="83501" lat="58.4111932" lon="15.6122934"/>
+ <node id="339026663" visible="true" version="3" changeset="45841064" timestamp="2017-02-05T22:02:34Z" user="riiga" uid="83501" lat="58.4108325" lon="15.6114276"/>
+ <node id="339026664" visible="true" version="3" changeset="45841064" timestamp="2017-02-05T22:02:34Z" user="riiga" uid="83501" lat="58.4112478" lon="15.6118795"/>
+ <node id="339026665" visible="true" version="3" changeset="45841064" timestamp="2017-02-05T22:02:34Z" user="riiga" uid="83501" lat="58.4110302" lon="15.6120706"/>
+ <node id="339026666" visible="true" version="2" changeset="45841064" timestamp="2017-02-05T22:02:34Z" user="riiga" uid="83501" lat="58.4107384" lon="15.6117504"/>
+ <node id="339029199" visible="true" version="3" changeset="45726049" timestamp="2017-02-01T20:04:40Z" user="riiga" uid="83501" lat="58.4101959" lon="15.6155228"/>
+ <node id="339030551" visible="true" version="4" changeset="45726049" timestamp="2017-02-01T20:04:40Z" user="riiga" uid="83501" lat="58.4098443" lon="15.6137948"/>
+ <node id="339030968" visible="true" version="1" changeset="855452" timestamp="2009-01-29T23:00:07Z" user="LA2" uid="229" lat="58.4108233" lon="15.6161787"/>
+ <node id="339030969" visible="true" version="2" changeset="45726049" timestamp="2017-02-01T20:04:40Z" user="riiga" uid="83501" lat="58.4107405" lon="15.6162075"/>
+ <node id="339030970" visible="true" version="2" changeset="45726049" timestamp="2017-02-01T20:04:40Z" user="riiga" uid="83501" lat="58.4106827" lon="15.6153524"/>
+ <node id="339030971" visible="true" version="2" changeset="45726049" timestamp="2017-02-01T20:04:40Z" user="riiga" uid="83501" lat="58.4104127" lon="15.6154023"/>
+ <node id="405320502" visible="true" version="3" changeset="46722440" timestamp="2017-03-09T21:16:36Z" user="riiga" uid="83501" lat="58.4102016" lon="15.6105527"/>
+ <node id="405320504" visible="true" version="2" changeset="34756627" timestamp="2015-10-20T14:30:07Z" user="riiga" uid="83501" lat="58.4103490" lon="15.6106897"/>
+ <node id="405320507" visible="true" version="2" changeset="34756627" timestamp="2015-10-20T14:30:07Z" user="riiga" uid="83501" lat="58.4108227" lon="15.6113329"/>
+ <node id="405320509" visible="true" version="2" changeset="45841064" timestamp="2017-02-05T22:02:36Z" user="riiga" uid="83501" lat="58.4111201" lon="15.6116231"/>
+ <node id="405320511" visible="true" version="2" changeset="34756627" timestamp="2015-10-20T14:30:07Z" user="riiga" uid="83501" lat="58.4114871" lon="15.6120055"/>
+ <node id="564988762" visible="true" version="5" changeset="46722440" timestamp="2017-03-09T21:16:36Z" user="riiga" uid="83501" lat="58.4099982" lon="15.6103787"/>
+ <node id="565006641" visible="true" version="3" changeset="45841064" timestamp="2017-02-05T22:02:36Z" user="riiga" uid="83501" lat="58.4107312" lon="15.6115038"/>
+ <node id="565006642" visible="true" version="3" changeset="45841064" timestamp="2017-02-05T22:02:36Z" user="riiga" uid="83501" lat="58.4106104" lon="15.6113975"/>
+ <node id="565006644" visible="true" version="3" changeset="45841064" timestamp="2017-02-05T22:02:36Z" user="riiga" uid="83501" lat="58.4106324" lon="15.6110788"/>
+ <node id="565006645" visible="true" version="3" changeset="45841064" timestamp="2017-02-05T22:02:36Z" user="riiga" uid="83501" lat="58.4106404" lon="15.6118151"/>
+ <node id="565006655" visible="true" version="3" changeset="45841064" timestamp="2017-02-05T22:02:36Z" user="riiga" uid="83501" lat="58.4119394" lon="15.6123697"/>
+ <node id="565006656" visible="true" version="3" changeset="45841064" timestamp="2017-02-05T22:02:36Z" user="riiga" uid="83501" lat="58.4121595" lon="15.6125621"/>
+ <node id="2063693317" visible="true" version="4" changeset="45841064" timestamp="2017-02-05T22:02:37Z" user="riiga" uid="83501" lat="58.4112938" lon="15.6140024"/>
+ <node id="2271637031" visible="true" version="3" changeset="45841064" timestamp="2017-02-05T22:02:38Z" user="riiga" uid="83501" lat="58.4111009" lon="15.6130167"/>
+ <node id="2377565535" visible="true" version="2" changeset="45841064" timestamp="2017-02-05T22:02:38Z" user="riiga" uid="83501" lat="58.4143702" lon="15.6144641"/>
+ <node id="3794393222" visible="true" version="1" changeset="34756627" timestamp="2015-10-20T14:29:40Z" user="riiga" uid="83501" lat="58.4105193" lon="15.6109284"/>
+ <node id="3794393223" visible="true" version="1" changeset="34756627" timestamp="2015-10-20T14:29:40Z" user="riiga" uid="83501" lat="58.4107015" lon="15.6111960"/>
+ <node id="3794393227" visible="true" version="2" changeset="45841064" timestamp="2017-02-05T22:02:39Z" user="riiga" uid="83501" lat="58.4109815" lon="15.6114582"/>
+ <node id="3794393228" visible="true" version="2" changeset="45841064" timestamp="2017-02-05T22:02:39Z" user="riiga" uid="83501" lat="58.4111192" lon="15.6119753"/>
+ <node id="3794393229" visible="true" version="2" changeset="45841064" timestamp="2017-02-05T22:02:39Z" user="riiga" uid="83501" lat="58.4111414" lon="15.6130917"/>
+ <node id="3794393230" visible="true" version="2" changeset="45841064" timestamp="2017-02-05T22:02:39Z" user="riiga" uid="83501" lat="58.4111646" lon="15.6131562"/>
+ <node id="3794393231" visible="true" version="2" changeset="45841064" timestamp="2017-02-05T22:02:39Z" user="riiga" uid="83501" lat="58.4111460" lon="15.6118719"/>
+ <node id="3794393232" visible="true" version="2" changeset="45841064" timestamp="2017-02-05T22:02:39Z" user="riiga" uid="83501" lat="58.4111729" lon="15.6133337"/>
+ <node id="3794393233" visible="true" version="1" changeset="34756627" timestamp="2015-10-20T14:29:40Z" user="riiga" uid="83501" lat="58.4111786" lon="15.6120626"/>
+ <node id="3794393234" visible="true" version="2" changeset="45841064" timestamp="2017-02-05T22:02:39Z" user="riiga" uid="83501" lat="58.4111746" lon="15.6132724"/>
+ <node id="3794393235" visible="true" version="2" changeset="45841064" timestamp="2017-02-05T22:02:39Z" user="riiga" uid="83501" lat="58.4111762" lon="15.6132100"/>
+ <node id="3794393236" visible="true" version="2" changeset="45841064" timestamp="2017-02-05T22:02:39Z" user="riiga" uid="83501" lat="58.4111726" lon="15.6135005"/>
+ <node id="3794393237" visible="true" version="2" changeset="45841064" timestamp="2017-02-05T22:02:39Z" user="riiga" uid="83501" lat="58.4111770" lon="15.6135734"/>
+ <node id="3794393238" visible="true" version="2" changeset="45841064" timestamp="2017-02-05T22:02:39Z" user="riiga" uid="83501" lat="58.4111781" lon="15.6134265"/>
+ <node id="3794393239" visible="true" version="2" changeset="45841064" timestamp="2017-02-05T22:02:39Z" user="riiga" uid="83501" lat="58.4111908" lon="15.6136178"/>
+ <node id="3794393240" visible="true" version="2" changeset="45841064" timestamp="2017-02-05T22:02:39Z" user="riiga" uid="83501" lat="58.4112030" lon="15.6137136"/>
+ <node id="3794393241" visible="true" version="2" changeset="45841064" timestamp="2017-02-05T22:02:39Z" user="riiga" uid="83501" lat="58.4112030" lon="15.6136558"/>
+ <node id="3794393242" visible="true" version="2" changeset="45841064" timestamp="2017-02-05T22:02:39Z" user="riiga" uid="83501" lat="58.4112234" lon="15.6137759"/>
+ <node id="3794393243" visible="true" version="2" changeset="45841064" timestamp="2017-02-05T22:02:39Z" user="riiga" uid="83501" lat="58.4112258" lon="15.6119547"/>
+ <node id="3794393244" visible="true" version="2" changeset="45841064" timestamp="2017-02-05T22:02:39Z" user="riiga" uid="83501" lat="58.4112329" lon="15.6139671"/>
+ <node id="3794393245" visible="true" version="2" changeset="45841064" timestamp="2017-02-05T22:02:39Z" user="riiga" uid="83501" lat="58.4112362" lon="15.6138287"/>
+ <node id="3794393246" visible="true" version="2" changeset="45841064" timestamp="2017-02-05T22:02:39Z" user="riiga" uid="83501" lat="58.4112389" lon="15.6138826"/>
+ <node id="3794399428" visible="true" version="2" changeset="45841064" timestamp="2017-02-05T22:02:41Z" user="riiga" uid="83501" lat="58.4114138" lon="15.6119430"/>
+ <node id="3794399444" visible="true" version="2" changeset="45841064" timestamp="2017-02-05T22:02:41Z" user="riiga" uid="83501" lat="58.4115656" lon="15.6120680"/>
+ <node id="3794399447" visible="true" version="1" changeset="34756627" timestamp="2015-10-20T14:29:42Z" user="riiga" uid="83501" lat="58.4122663" lon="15.6126704"/>
+ <node id="3794399449" visible="true" version="2" changeset="45841064" timestamp="2017-02-05T22:02:41Z" user="riiga" uid="83501" lat="58.4125157" lon="15.6128630"/>
+ <node id="3794399450" visible="true" version="2" changeset="45841064" timestamp="2017-02-05T22:02:41Z" user="riiga" uid="83501" lat="58.4125450" lon="15.6128703"/>
+ <node id="3794399454" visible="true" version="1" changeset="34756627" timestamp="2015-10-20T14:29:42Z" user="riiga" uid="83501" lat="58.4126722" lon="15.6129475"/>
+ <node id="3794399459" visible="true" version="1" changeset="34756627" timestamp="2015-10-20T14:29:42Z" user="riiga" uid="83501" lat="58.4128301" lon="15.6130739"/>
+ <node id="3794399471" visible="true" version="2" changeset="45841064" timestamp="2017-02-05T22:02:41Z" user="riiga" uid="83501" lat="58.4130463" lon="15.6132612"/>
+ <node id="3794399491" visible="true" version="2" changeset="45841064" timestamp="2017-02-05T22:02:42Z" user="riiga" uid="83501" lat="58.4136231" lon="15.6137721"/>
+ <node id="3794399509" visible="true" version="2" changeset="45841064" timestamp="2017-02-05T22:02:42Z" user="riiga" uid="83501" lat="58.4141537" lon="15.6142087"/>
+ <node id="3794399528" visible="true" version="2" changeset="45841064" timestamp="2017-02-05T22:02:42Z" user="riiga" uid="83501" lat="58.4143096" lon="15.6143739"/>
+ <node id="4075443821" visible="true" version="2" changeset="45841064" timestamp="2017-02-05T22:02:42Z" user="riiga" uid="83501" lat="58.4129779" lon="15.6131957"/>
+ <node id="4075443824" visible="true" version="2" changeset="45841064" timestamp="2017-02-05T22:02:42Z" user="riiga" uid="83501" lat="58.4131533" lon="15.6133595"/>
+ <node id="4550403970" visible="true" version="2" changeset="45726049" timestamp="2017-02-01T20:04:45Z" user="riiga" uid="83501" lat="58.4099085" lon="15.6140932"/>
+ <node id="4550403971" visible="true" version="2" changeset="45726049" timestamp="2017-02-01T20:04:45Z" user="riiga" uid="83501" lat="58.4099901" lon="15.6144943"/>
+ <node id="4550403972" visible="true" version="2" changeset="45726049" timestamp="2017-02-01T20:04:45Z" user="riiga" uid="83501" lat="58.4100577" lon="15.6144444"/>
+ <node id="4550403973" visible="true" version="2" changeset="45726049" timestamp="2017-02-01T20:04:45Z" user="riiga" uid="83501" lat="58.4099762" lon="15.6140432"/>
+ <node id="4666262678" visible="true" version="1" changeset="45841064" timestamp="2017-02-05T22:02:19Z" user="riiga" uid="83501" lat="58.4106632" lon="15.6141406"/>
+ <node id="4666262679" visible="true" version="1" changeset="45841064" timestamp="2017-02-05T22:02:19Z" user="riiga" uid="83501" lat="58.4107429" lon="15.6141695"/>
+ <node id="4666262680" visible="true" version="1" changeset="45841064" timestamp="2017-02-05T22:02:19Z" user="riiga" uid="83501" lat="58.4107792" lon="15.6142089"/>
+ <node id="4666262681" visible="true" version="1" changeset="45841064" timestamp="2017-02-05T22:02:19Z" user="riiga" uid="83501" lat="58.4107047" lon="15.6141688"/>
+ <node id="4666262682" visible="true" version="1" changeset="45841064" timestamp="2017-02-05T22:02:19Z" user="riiga" uid="83501" lat="58.4106258" lon="15.6141610"/>
+ <node id="4666262683" visible="true" version="1" changeset="45841064" timestamp="2017-02-05T22:02:19Z" user="riiga" uid="83501" lat="58.4109435" lon="15.6141034"/>
+ <node id="4666262684" visible="true" version="1" changeset="45841064" timestamp="2017-02-05T22:02:19Z" user="riiga" uid="83501" lat="58.4109423" lon="15.6141778"/>
+ <node id="4666262685" visible="true" version="1" changeset="45841064" timestamp="2017-02-05T22:02:19Z" user="riiga" uid="83501" lat="58.4109156" lon="15.6142598"/>
+ <node id="4666262686" visible="true" version="1" changeset="45841064" timestamp="2017-02-05T22:02:19Z" user="riiga" uid="83501" lat="58.4108780" lon="15.6143077"/>
+ <node id="4666262687" visible="true" version="1" changeset="45841064" timestamp="2017-02-05T22:02:19Z" user="riiga" uid="83501" lat="58.4108458" lon="15.6143023"/>
+ <node id="4666262688" visible="true" version="1" changeset="45841064" timestamp="2017-02-05T22:02:19Z" user="riiga" uid="83501" lat="58.4108046" lon="15.6142191"/>
+ <node id="4666263589" visible="true" version="1" changeset="45841064" timestamp="2017-02-05T22:02:19Z" user="riiga" uid="83501" lat="58.4107913" lon="15.6141638"/>
+ <node id="4666263590" visible="true" version="1" changeset="45841064" timestamp="2017-02-05T22:02:19Z" user="riiga" uid="83501" lat="58.4108300" lon="15.6140529"/>
+ <node id="4666263591" visible="true" version="1" changeset="45841064" timestamp="2017-02-05T22:02:19Z" user="riiga" uid="83501" lat="58.4108600" lon="15.6139920"/>
+ <node id="4666263592" visible="true" version="1" changeset="45841064" timestamp="2017-02-05T22:02:19Z" user="riiga" uid="83501" lat="58.4108957" lon="15.6139813"/>
+ <node id="4666263593" visible="true" version="1" changeset="45841064" timestamp="2017-02-05T22:02:19Z" user="riiga" uid="83501" lat="58.4109345" lon="15.6140272"/>
+ <node id="4666263594" visible="true" version="1" changeset="45841064" timestamp="2017-02-05T22:02:19Z" user="riiga" uid="83501" lat="58.4106192" lon="15.6139457"/>
+ <node id="4666263595" visible="true" version="1" changeset="45841064" timestamp="2017-02-05T22:02:19Z" user="riiga" uid="83501" lat="58.4106159" lon="15.6140831"/>
+ <node id="4666263596" visible="true" version="1" changeset="45841064" timestamp="2017-02-05T22:02:19Z" user="riiga" uid="83501" lat="58.4105868" lon="15.6141457"/>
+ <node id="4666263597" visible="true" version="1" changeset="45841064" timestamp="2017-02-05T22:02:19Z" user="riiga" uid="83501" lat="58.4105331" lon="15.6141917"/>
+ <node id="4666263598" visible="true" version="1" changeset="45841064" timestamp="2017-02-05T22:02:19Z" user="riiga" uid="83501" lat="58.4104796" lon="15.6141891"/>
+ <node id="4666263599" visible="true" version="1" changeset="45841064" timestamp="2017-02-05T22:02:19Z" user="riiga" uid="83501" lat="58.4104322" lon="15.6141592"/>
+ <node id="4666263600" visible="true" version="1" changeset="45841064" timestamp="2017-02-05T22:02:19Z" user="riiga" uid="83501" lat="58.4103956" lon="15.6140146"/>
+ <node id="4666263601" visible="true" version="1" changeset="45841064" timestamp="2017-02-05T22:02:19Z" user="riiga" uid="83501" lat="58.4103880" lon="15.6138188"/>
+ <node id="4666263602" visible="true" version="1" changeset="45841064" timestamp="2017-02-05T22:02:19Z" user="riiga" uid="83501" lat="58.4103955" lon="15.6136863"/>
+ <node id="4666263603" visible="true" version="1" changeset="45841064" timestamp="2017-02-05T22:02:19Z" user="riiga" uid="83501" lat="58.4104257" lon="15.6135801"/>
+ <node id="4666263604" visible="true" version="1" changeset="45841064" timestamp="2017-02-05T22:02:19Z" user="riiga" uid="83501" lat="58.4105041" lon="15.6135200"/>
+ <node id="4666263605" visible="true" version="1" changeset="45841064" timestamp="2017-02-05T22:02:19Z" user="riiga" uid="83501" lat="58.4105567" lon="15.6135241"/>
+ <node id="4666263606" visible="true" version="1" changeset="45841064" timestamp="2017-02-05T22:02:19Z" user="riiga" uid="83501" lat="58.4105829" lon="15.6135456"/>
+ <node id="4666263607" visible="true" version="1" changeset="45841064" timestamp="2017-02-05T22:02:19Z" user="riiga" uid="83501" lat="58.4106050" lon="15.6137142"/>
+ <node id="4666263617" visible="true" version="1" changeset="45841064" timestamp="2017-02-05T22:02:19Z" user="riiga" uid="83501" lat="58.4096631" lon="15.6138197"/>
+ <node id="4666263618" visible="true" version="2" changeset="49001810" timestamp="2017-05-26T12:59:33Z" user="Ka-Ka" uid="460" lat="58.4099811" lon="15.6121964">
+  <tag k="amenity" v="bicycle_parking"/>
+  <tag k="capacity" v="32"/>
+ </node>
+ <node id="4666263619" visible="true" version="1" changeset="45841064" timestamp="2017-02-05T22:02:19Z" user="riiga" uid="83501" lat="58.4112808" lon="15.6123848"/>
+ <node id="4666263620" visible="true" version="1" changeset="45841064" timestamp="2017-02-05T22:02:20Z" user="riiga" uid="83501" lat="58.4111248" lon="15.6129278"/>
+ <node id="4666263621" visible="true" version="1" changeset="45841064" timestamp="2017-02-05T22:02:20Z" user="riiga" uid="83501" lat="58.4113394" lon="15.6129347"/>
+ <node id="4666263638" visible="true" version="1" changeset="45841064" timestamp="2017-02-05T22:02:20Z" user="riiga" uid="83501" lat="58.4094930" lon="15.6125273"/>
+ <node id="4666263639" visible="true" version="1" changeset="45841064" timestamp="2017-02-05T22:02:20Z" user="riiga" uid="83501" lat="58.4103534" lon="15.6120719"/>
+ <node id="4666263640" visible="true" version="1" changeset="45841064" timestamp="2017-02-05T22:02:20Z" user="riiga" uid="83501" lat="58.4103544" lon="15.6120298"/>
+ <node id="4666263641" visible="true" version="1" changeset="45841064" timestamp="2017-02-05T22:02:20Z" user="riiga" uid="83501" lat="58.4094500" lon="15.6125054"/>
+ <node id="4666263642" visible="true" version="1" changeset="45841064" timestamp="2017-02-05T22:02:20Z" user="riiga" uid="83501" lat="58.4093061" lon="15.6115211"/>
+ <node id="4666263643" visible="true" version="1" changeset="45841064" timestamp="2017-02-05T22:02:20Z" user="riiga" uid="83501" lat="58.4099502" lon="15.6104456"/>
+ <node id="4666263644" visible="true" version="1" changeset="45841064" timestamp="2017-02-05T22:02:20Z" user="riiga" uid="83501" lat="58.4100331" lon="15.6104455"/>
+ <node id="4666263645" visible="true" version="1" changeset="45841064" timestamp="2017-02-05T22:02:20Z" user="riiga" uid="83501" lat="58.4101949" lon="15.6105837"/>
+ <node id="4666263646" visible="true" version="1" changeset="45841064" timestamp="2017-02-05T22:02:20Z" user="riiga" uid="83501" lat="58.4103412" lon="15.6107138"/>
+ <node id="4666263647" visible="true" version="1" changeset="45841064" timestamp="2017-02-05T22:02:20Z" user="riiga" uid="83501" lat="58.4104761" lon="15.6109096"/>
+ <node id="4666263648" visible="true" version="1" changeset="45841064" timestamp="2017-02-05T22:02:20Z" user="riiga" uid="83501" lat="58.4106151" lon="15.6110871"/>
+ <node id="4666263649" visible="true" version="1" changeset="45841064" timestamp="2017-02-05T22:02:20Z" user="riiga" uid="83501" lat="58.4106773" lon="15.6112287"/>
+ <node id="4666263650" visible="true" version="1" changeset="45841064" timestamp="2017-02-05T22:02:20Z" user="riiga" uid="83501" lat="58.4107985" lon="15.6113656"/>
+ <node id="4666263651" visible="true" version="1" changeset="45841064" timestamp="2017-02-05T22:02:20Z" user="riiga" uid="83501" lat="58.4109484" lon="15.6114771"/>
+ <node id="4666263652" visible="true" version="1" changeset="45841064" timestamp="2017-02-05T22:02:20Z" user="riiga" uid="83501" lat="58.4114444" lon="15.6120162"/>
+ <node id="4666263653" visible="true" version="1" changeset="45841064" timestamp="2017-02-05T22:02:20Z" user="riiga" uid="83501" lat="58.4111725" lon="15.6129355"/>
+ <node id="4666263654" visible="true" version="1" changeset="45841064" timestamp="2017-02-05T22:02:20Z" user="riiga" uid="83501" lat="58.4111829" lon="15.6130181"/>
+ <node id="4666263657" visible="true" version="1" changeset="45841064" timestamp="2017-02-05T22:02:20Z" user="riiga" uid="83501" lat="58.4112009" lon="15.6147155"/>
+ <node id="4666263658" visible="true" version="1" changeset="45841064" timestamp="2017-02-05T22:02:20Z" user="riiga" uid="83501" lat="58.4111817" lon="15.6139420"/>
+ <node id="4666263660" visible="true" version="1" changeset="45841064" timestamp="2017-02-05T22:02:20Z" user="riiga" uid="83501" lat="58.4105752" lon="15.6116175">
+  <tag k="entrance" v="main"/>
+ </node>
+ <node id="4666263666" visible="true" version="1" changeset="45841064" timestamp="2017-02-05T22:02:20Z" user="riiga" uid="83501" lat="58.4095133" lon="15.6122852"/>
+ <node id="4666263667" visible="true" version="1" changeset="45841064" timestamp="2017-02-05T22:02:20Z" user="riiga" uid="83501" lat="58.4095335" lon="15.6122746"/>
+ <node id="4666263668" visible="true" version="1" changeset="45841064" timestamp="2017-02-05T22:02:20Z" user="riiga" uid="83501" lat="58.4094608" lon="15.6122323"/>
+ <node id="4666263669" visible="true" version="1" changeset="45841064" timestamp="2017-02-05T22:02:20Z" user="riiga" uid="83501" lat="58.4094397" lon="15.6120858"/>
+ <node id="4666263670" visible="true" version="1" changeset="45841064" timestamp="2017-02-05T22:02:20Z" user="riiga" uid="83501" lat="58.4094495" lon="15.6122381"/>
+ <node id="4666263671" visible="true" version="1" changeset="45841064" timestamp="2017-02-05T22:02:20Z" user="riiga" uid="83501" lat="58.4094289" lon="15.6120913"/>
+ <node id="4666263672" visible="true" version="1" changeset="45841064" timestamp="2017-02-05T22:02:20Z" user="riiga" uid="83501" lat="58.4095383" lon="15.6123067"/>
+ <node id="4666263673" visible="true" version="1" changeset="45841064" timestamp="2017-02-05T22:02:20Z" user="riiga" uid="83501" lat="58.4095181" lon="15.6123176"/>
+ <node id="4666263674" visible="true" version="1" changeset="45841064" timestamp="2017-02-05T22:02:20Z" user="riiga" uid="83501" lat="58.4097349" lon="15.6121690"/>
+ <node id="4666263675" visible="true" version="1" changeset="45841064" timestamp="2017-02-05T22:02:20Z" user="riiga" uid="83501" lat="58.4096810" lon="15.6121973"/>
+ <node id="4666263676" visible="true" version="1" changeset="45841064" timestamp="2017-02-05T22:02:20Z" user="riiga" uid="83501" lat="58.4097196" lon="15.6122046"/>
+ <node id="4666263677" visible="true" version="1" changeset="45841064" timestamp="2017-02-05T22:02:20Z" user="riiga" uid="83501" lat="58.4097418" lon="15.6122160"/>
+ <node id="4666263678" visible="true" version="1" changeset="45841064" timestamp="2017-02-05T22:02:21Z" user="riiga" uid="83501" lat="58.4097227" lon="15.6122261"/>
+ <node id="4666263679" visible="true" version="1" changeset="45841064" timestamp="2017-02-05T22:02:21Z" user="riiga" uid="83501" lat="58.4096843" lon="15.6122220"/>
+ <node id="4666263680" visible="true" version="1" changeset="45841064" timestamp="2017-02-05T22:02:21Z" user="riiga" uid="83501" lat="58.4104169" lon="15.6118871"/>
+ <node id="4666263681" visible="true" version="1" changeset="45841064" timestamp="2017-02-05T22:02:21Z" user="riiga" uid="83501" lat="58.4103921" lon="15.6118598"/>
+ <node id="4666263682" visible="true" version="1" changeset="45841064" timestamp="2017-02-05T22:02:21Z" user="riiga" uid="83501" lat="58.4103758" lon="15.6118812"/>
+ <node id="4666263683" visible="true" version="1" changeset="45841064" timestamp="2017-02-05T22:02:21Z" user="riiga" uid="83501" lat="58.4104165" lon="15.6119272"/>
+ <node id="4666263684" visible="true" version="1" changeset="45841064" timestamp="2017-02-05T22:02:21Z" user="riiga" uid="83501" lat="58.4108815" lon="15.6124474"/>
+ <node id="4666263685" visible="true" version="1" changeset="45841064" timestamp="2017-02-05T22:02:21Z" user="riiga" uid="83501" lat="58.4108780" lon="15.6124597"/>
+ <node id="4666263793" visible="true" version="1" changeset="45841064" timestamp="2017-02-05T22:02:21Z" user="riiga" uid="83501" lat="58.4117159" lon="15.6145207"/>
+ <node id="4666263822" visible="true" version="1" changeset="45841064" timestamp="2017-02-05T22:02:21Z" user="riiga" uid="83501" lat="58.4125820" lon="15.6128771"/>
+ <node id="4666263834" visible="true" version="1" changeset="45841064" timestamp="2017-02-05T22:02:21Z" user="riiga" uid="83501" lat="58.4129063" lon="15.6131368"/>
+ <node id="4666263854" visible="true" version="1" changeset="45841064" timestamp="2017-02-05T22:02:22Z" user="riiga" uid="83501" lat="58.4115289" lon="15.6161183"/>
+ <way id="4498779" visible="true" version="5" changeset="49672465" timestamp="2017-06-19T17:15:02Z" user="riiga" uid="83501">
+  <nd ref="152194"/>
+  <nd ref="4666263617"/>
+  <nd ref="2271637031"/>
+  <nd ref="100572"/>
+  <tag k="highway" v="cycleway"/>
+  <tag k="surface" v="asphalt"/>
+ </way>
+ <way id="30490446" visible="true" version="5" changeset="45841064" timestamp="2017-02-05T22:02:44Z" user="riiga" uid="83501">
+  <nd ref="4666263671"/>
+  <nd ref="4666263669"/>
+  <nd ref="336467912"/>
+  <nd ref="336467923"/>
+  <nd ref="4666263660"/>
+  <nd ref="336467920"/>
+  <nd ref="565006645"/>
+  <nd ref="336467918"/>
+  <nd ref="336467917"/>
+  <nd ref="4666263685"/>
+  <nd ref="4666263684"/>
+  <nd ref="4666263683"/>
+  <nd ref="4666263680"/>
+  <nd ref="4666263681"/>
+  <nd ref="4666263682"/>
+  <nd ref="336467916"/>
+  <nd ref="4666263674"/>
+  <nd ref="4666263677"/>
+  <nd ref="4666263678"/>
+  <nd ref="4666263676"/>
+  <nd ref="4666263679"/>
+  <nd ref="4666263675"/>
+  <nd ref="4666263667"/>
+  <nd ref="4666263672"/>
+  <nd ref="4666263673"/>
+  <nd ref="4666263666"/>
+  <nd ref="336467914"/>
+  <nd ref="4666263668"/>
+  <nd ref="4666263670"/>
+  <nd ref="4666263671"/>
+  <tag k="addr:city" v="Linköping"/>
+  <tag k="addr:country" v="SE"/>
+  <tag k="addr:housenumber" v="3"/>
+  <tag k="addr:street" v="Östgötagatan"/>
+  <tag k="building" v="yes"/>
+  <tag k="building:levels" v="3"/>
+  <tag k="name" v="Länsstyrelsen"/>
+  <tag k="office" v="government"/>
+ </way>
+ <way id="30607577" visible="true" version="5" changeset="45841064" timestamp="2017-02-05T22:02:44Z" user="riiga" uid="83501">
+  <nd ref="4666263638"/>
+  <nd ref="4666263639"/>
+  <nd ref="4666263654"/>
+  <nd ref="339026643"/>
+  <nd ref="339026642"/>
+  <nd ref="4666263793"/>
+  <nd ref="339026641"/>
+  <nd ref="339026640"/>
+  <nd ref="339026651"/>
+  <nd ref="338449498"/>
+  <nd ref="339026653"/>
+  <nd ref="338449501"/>
+  <nd ref="339026655"/>
+  <nd ref="339026656"/>
+  <nd ref="4666263657"/>
+  <nd ref="4666263658"/>
+  <nd ref="339026657"/>
+  <nd ref="338449504"/>
+  <nd ref="339030551"/>
+  <nd ref="338449507"/>
+  <nd ref="4666263638"/>
+  <tag k="leisure" v="park"/>
+  <tag k="name" v="Slottsparken"/>
+ </way>
+ <way id="30656005" visible="true" version="4" changeset="49672465" timestamp="2017-06-19T17:15:07Z" user="riiga" uid="83501">
+  <nd ref="306682704"/>
+  <nd ref="100572"/>
+  <nd ref="2063693317"/>
+  <nd ref="7052023"/>
+  <nd ref="4666263854"/>
+  <nd ref="100576"/>
+  <tag k="bicycle" v="yes"/>
+  <tag k="highway" v="cycleway"/>
+  <tag k="surface" v="asphalt"/>
+ </way>
+ <way id="30656007" visible="true" version="3" changeset="45841064" timestamp="2017-02-05T22:02:46Z" user="riiga" uid="83501">
+  <nd ref="152195"/>
+  <nd ref="338449488"/>
+  <nd ref="338449491"/>
+  <nd ref="4666263620"/>
+  <nd ref="100572"/>
+  <tag k="highway" v="footway"/>
+ </way>
+ <way id="30656008" visible="true" version="3" changeset="45841064" timestamp="2017-02-05T22:02:47Z" user="riiga" uid="83501">
+  <nd ref="339026659"/>
+  <nd ref="4666263619"/>
+  <nd ref="339026662"/>
+  <nd ref="339026660"/>
+  <nd ref="336458899"/>
+  <nd ref="339026661"/>
+  <nd ref="3794393233"/>
+  <nd ref="339026662"/>
+  <tag k="highway" v="service"/>
+  <tag k="service" v="parking_aisle"/>
+ </way>
+ <way id="30656009" visible="true" version="3" changeset="34756627" timestamp="2015-10-20T14:29:47Z" user="riiga" uid="83501">
+  <nd ref="339026663"/>
+  <nd ref="339026664"/>
+  <nd ref="3794393243"/>
+  <nd ref="3794393231"/>
+  <nd ref="3794393228"/>
+  <nd ref="339026665"/>
+  <nd ref="339026666"/>
+  <nd ref="339026663"/>
+  <tag k="amenity" v="parking"/>
+  <tag k="capacity" v="10"/>
+  <tag k="fee" v="yes"/>
+  <tag k="opening_hours" v="Mo-Fr 00:00-07:00,16:00-24:00; Sa-Su 00:00-24:00"/>
+  <tag k="parking" v="surface"/>
+ </way>
+ <way id="30656394" visible="true" version="4" changeset="45841064" timestamp="2017-02-05T22:02:48Z" user="riiga" uid="83501">
+  <nd ref="339029199"/>
+  <nd ref="339030551"/>
+  <nd ref="338449504"/>
+  <nd ref="339026657"/>
+  <nd ref="4666263658"/>
+  <nd ref="4666263657"/>
+  <nd ref="339026656"/>
+  <nd ref="339026655"/>
+  <nd ref="338449501"/>
+  <nd ref="339030968"/>
+  <nd ref="339030969"/>
+  <nd ref="339030970"/>
+  <nd ref="339030971"/>
+  <nd ref="339029199"/>
+  <tag k="leisure" v="garden"/>
+  <tag k="name" v="Slottsträdgården"/>
+ </way>
+ <way id="44458476" visible="true" version="3" changeset="49025488" timestamp="2017-05-27T13:55:00Z" user="Ka-Ka" uid="460">
+  <nd ref="565006645"/>
+  <nd ref="565006641"/>
+  <nd ref="565006642"/>
+  <nd ref="336467923"/>
+  <nd ref="4666263660"/>
+  <nd ref="336467920"/>
+  <nd ref="565006645"/>
+  <tag k="area" v="yes"/>
+  <tag k="highway" v="pedestrian"/>
+  <tag k="noname" v="yes"/>
+  <tag k="surface" v="paving_stones"/>
+ </way>
+ <way id="195997642" visible="true" version="4" changeset="45841064" timestamp="2017-02-05T22:02:49Z" user="riiga" uid="83501">
+  <nd ref="4666263640"/>
+  <nd ref="4666263653"/>
+  <nd ref="4666263652"/>
+  <nd ref="4666263651"/>
+  <nd ref="4666263650"/>
+  <nd ref="4666263649"/>
+  <nd ref="4666263648"/>
+  <nd ref="4666263647"/>
+  <nd ref="4666263646"/>
+  <nd ref="4666263645"/>
+  <nd ref="4666263644"/>
+  <nd ref="4666263643"/>
+  <nd ref="4666263642"/>
+  <nd ref="4666263641"/>
+  <nd ref="4666263640"/>
+  <tag k="landuse" v="residential"/>
+  <tag k="name" v="Amasonen"/>
+  <tag k="place" v="city_block"/>
+ </way>
+ <way id="376087237" visible="true" version="1" changeset="34756627" timestamp="2015-10-20T14:29:45Z" user="riiga" uid="83501">
+  <nd ref="3794393240"/>
+  <nd ref="3794393242"/>
+  <nd ref="3794393245"/>
+  <nd ref="3794393246"/>
+  <nd ref="3794393244"/>
+  <tag k="barrier" v="hedge"/>
+ </way>
+ <way id="376087238" visible="true" version="1" changeset="34756627" timestamp="2015-10-20T14:29:45Z" user="riiga" uid="83501">
+  <nd ref="3794393238"/>
+  <nd ref="3794393236"/>
+  <nd ref="3794393237"/>
+  <nd ref="3794393239"/>
+  <nd ref="3794393241"/>
+  <tag k="barrier" v="hedge"/>
+ </way>
+ <way id="376087240" visible="true" version="1" changeset="34756627" timestamp="2015-10-20T14:29:45Z" user="riiga" uid="83501">
+  <nd ref="3794393229"/>
+  <nd ref="3794393230"/>
+  <nd ref="3794393235"/>
+  <nd ref="3794393234"/>
+  <nd ref="3794393232"/>
+  <tag k="barrier" v="hedge"/>
+ </way>
+ <way id="376087246" visible="true" version="4" changeset="49672465" timestamp="2017-06-19T17:15:18Z" user="riiga" uid="83501">
+  <nd ref="564988762"/>
+  <nd ref="405320502"/>
+  <nd ref="405320504"/>
+  <nd ref="3794393222"/>
+  <nd ref="565006644"/>
+  <nd ref="3794393223"/>
+  <nd ref="405320507"/>
+  <nd ref="3794393227"/>
+  <nd ref="405320509"/>
+  <nd ref="3794399428"/>
+  <nd ref="405320511"/>
+  <nd ref="3794399444"/>
+  <nd ref="565006655"/>
+  <nd ref="565006656"/>
+  <nd ref="3794399447"/>
+  <nd ref="3794399449"/>
+  <nd ref="3794399450"/>
+  <nd ref="4666263822"/>
+  <nd ref="3794399454"/>
+  <nd ref="3794399459"/>
+  <nd ref="4666263834"/>
+  <nd ref="4075443821"/>
+  <nd ref="3794399471"/>
+  <nd ref="4075443824"/>
+  <nd ref="3794399491"/>
+  <nd ref="3794399509"/>
+  <nd ref="3794399528"/>
+  <nd ref="2377565535"/>
+  <tag k="bicycle" v="designated"/>
+  <tag k="foot" v="designated"/>
+  <tag k="highway" v="path"/>
+  <tag k="segregated" v="yes"/>
+  <tag k="surface" v="asphalt"/>
+ </way>
+ <way id="459125136" visible="true" version="1" changeset="44338723" timestamp="2016-12-12T07:32:44Z" user="Ka-Ka" uid="460">
+  <nd ref="4550403973"/>
+  <nd ref="4550403972"/>
+  <nd ref="4550403971"/>
+  <nd ref="4550403970"/>
+  <nd ref="4550403973"/>
+  <tag k="building" v="yes"/>
+ </way>
+ <way id="472415535" visible="true" version="1" changeset="45841064" timestamp="2017-02-05T22:02:28Z" user="riiga" uid="83501">
+  <nd ref="4666263589"/>
+  <nd ref="4666262679"/>
+  <nd ref="4666262678"/>
+  <nd ref="4666263595"/>
+  <nd ref="4666263594"/>
+  <nd ref="4666263607"/>
+  <nd ref="4666263606"/>
+  <nd ref="4666263605"/>
+  <nd ref="4666263604"/>
+  <nd ref="4666263603"/>
+  <nd ref="4666263602"/>
+  <nd ref="4666263601"/>
+  <nd ref="4666263600"/>
+  <nd ref="4666263599"/>
+  <nd ref="4666263598"/>
+  <nd ref="4666263597"/>
+  <nd ref="4666263596"/>
+  <nd ref="4666262682"/>
+  <nd ref="4666262681"/>
+  <nd ref="4666262680"/>
+  <nd ref="4666262688"/>
+  <nd ref="4666262687"/>
+  <nd ref="4666262686"/>
+  <nd ref="4666262685"/>
+  <nd ref="4666262684"/>
+  <nd ref="4666262683"/>
+  <nd ref="4666263593"/>
+  <nd ref="4666263592"/>
+  <nd ref="4666263591"/>
+  <nd ref="4666263590"/>
+  <nd ref="4666263589"/>
+  <tag k="natural" v="water"/>
+  <tag k="water" v="pond"/>
+ </way>
+ <way id="472415538" visible="true" version="1" changeset="45841064" timestamp="2017-02-05T22:02:28Z" user="riiga" uid="83501">
+  <nd ref="2271637031"/>
+  <nd ref="4666263620"/>
+  <nd ref="4666263619"/>
+  <tag k="highway" v="footway"/>
+ </way>
+ <way id="472415539" visible="true" version="2" changeset="49672465" timestamp="2017-06-19T17:15:23Z" user="riiga" uid="83501">
+  <nd ref="100572"/>
+  <nd ref="4666263621"/>
+  <tag k="highway" v="cycleway"/>
+  <tag k="surface" v="asphalt"/>
+ </way>
+</osm>
