@@ -7,6 +7,7 @@ from geopy.distance import vincenty
 import random
 import math
 
+INFINITY = 99999999 # Well... It's longer than any distance at earth.
 OSM_FILE = "linkoping-big.osm"
 
 nodes = {}
@@ -107,20 +108,22 @@ def calculate_initial_compass_bearing(pointA, pointB):
 def approx_compass_direction(node_1_id, node_2_id):
     node_1 = nodes[node_1_id]
     node_2 = nodes[node_2_id]
-    direction = calculate_initial_compass_bearing((node_1.lat, node_1.lon),
-                                                  (node_2.lat, node_2.lon))
+    orig_direction = calculate_initial_compass_bearing((node_1.lat, node_1.lon),
+                                                       (node_2.lat, node_2.lon))
+    direction = orig_direction
     directions = ("N", "NNE", "NE", "ENE",
                   "E", "ESE", "SE", "SES",
                   "S", "SWS", "SW", "WSW",
                   "W", "WNW", "NW", "NWN",)
     chunk = 360.0 / len(directions) # degrees
-    direction += chunk / 2 # To make the math more obvious
+    direction = (direction + chunk / 2) % 360.0 # Makes N be 0-chunk degrees
+    direction -= chunk # Makes N be <= 0
     for code in directions:
-        if direction <= chunk:
+        if direction <= 0:
             return code
         direction -= chunk
 
-    assert False, "Not reachable"
+    assert False, "Not reachable %g" % orig_direction
 
 node_neighbours = {} # node_id -> [(node_id, way_id]]
 
@@ -132,6 +135,9 @@ for entity in data:
     elif isinstance(entity, osmread.Way):
         if "highway" in entity.tags:
             highway_type = entity.tags["highway"]
+            if highway_type in ("construction", "proposed", "corridor",
+                                "elevator", "bridleway"):
+                continue
             ways[entity.id] = entity
             way_id = entity.id
             if "area" in entity.tags and entity.tags["area"] == "yes":
@@ -147,8 +153,9 @@ for entity in data:
                         node_neighbours.setdefault(node_id, []).append((last_node_id, way_id))
                         node_neighbours.setdefault(last_node_id, []).append((node_id, way_id))
                     last_node_id = node_id
-            
+
     elif isinstance(entity, osmread.Relation):
+        # TODO: Include highways here too!
         pass
     else:
         print("Unknown type of entity:")
@@ -176,52 +183,153 @@ for (neighbour_id, way_id) in node_neighbours[max_local_edge_count_node]:
 def distance(node_1_id, node_2_id):
     node_1 = nodes[node_1_id]
     node_2 = nodes[node_2_id]
+    # vincenty is the most accurate but slower. There is another that
+    # might be 0.5% wrong that we could use instead.
     dist = vincenty((node_1.lat, node_1.lon),
                     (node_2.lat, node_2.lon))
     return dist.meters
 
-start_node = 4796398550L
-if start_node in node_neighbours:
-    node_id = start_node
-else:
+start_node = 4796398550L # Westmansgatan 98
+end_node = 4640788458L # Repslagaregatan 21
+
+print("Total raw distance is %d meters" % distance(start_node, end_node))
+
+def closest_way_node(origin_node_id):
+    if origin_node_id in node_neighbours:
+        return origin_node_id
+
     closest_node_id = -1
-    closest_node_distance = 99999999
+    closest_node_distance = INFINITY
     for node_id in node_neighbours.iterkeys():
-        d = distance(start_node, node_id)
+        d = distance(origin_node_id, node_id)
         if d < closest_node_distance:
             closest_node_id = node_id
             closest_node_distance = d
-    node_id = closest_node_id
-        
+    return closest_node_id
+
+start_node_id = closest_way_node(start_node)
+current_node_id = start_node_id
+target_node_id = closest_way_node(end_node)
+print(nodes[end_node])
+print(nodes[target_node_id])
+
+print("Total distance between nodes is %d meters" % distance(current_node_id, target_node_id))
+
+shortest_distance = {} # Map from id to (distance, prev_node, via_way, estimated_to_target)
+
+# Going to implement A*
+
+def get_lowest_estimated_to_target(node_id_list):
+    candidate = None
+    candidate_cost = -1
+    for node_id in list(node_id_list):
+        if node_id in shortest_distance:
+            estimated_cost_to_target = shortest_distance[node_id][3]
+        else:
+            assert False, "Unreachable? %d" % node_id
+            estimated_cost_to_target = INFINITY
+        if candidate is None or estimated_cost_to_target < candidate_cost:
+            candidate = node_id
+            candidate_cost = estimated_cost_to_target
+    return candidate
+
 visited = set()
-visited.add(node_id)
-while node_id is not None:
-#    print(nodes[node_id])
-    neighbour_ids = node_neighbours[node_id]
-    option_count = len(neighbour_ids)
-    # print("%d options" % option_count)
-    current_node = nodes[node_id]
+visited.add(current_node_id)
+print(current_node_id)
+shortest_distance[current_node_id] = (0,
+                                      None,
+                                      None,
+                                      distance(current_node_id, target_node_id))
+
+nodes_with_possible_exists = set()
+nodes_with_possible_exists.add(current_node_id)
+nodes_already_evaluated = set()
+
+def print_path(start_node_id, end_node_id):
+    path = []
+    path.append(end_node_id)
+    node_id = end_node_id
+    path_length = 0
+    while node_id != start_node_id:
+        _, prev_node_id, via_way, _ = shortest_distance[node_id]
+        path.append(via_way)
+        path.append(prev_node_id)
+        path_length += distance(node_id, prev_node_id)
+        node_id = prev_node_id
+
+    assert len(path) % 2 == 1
+    path = list(reversed(path))
+
+    # Compress the path (skip middle nodes on the same "way")
+    # Todo: skip this in the loop above already.
+    froms = []
+    tos = []
+    the_ways = []
+    the_distances = []
+
+    i = 1
+    while i < len(path):
+        froms.append(path[i - 1])
+        # Add the Way id
+        the_ways.append(path[i])
+        cum_distance = distance(froms[-1], path[i + 1])
+        # Skip as long as it's the same way in the same approx direction
+        while (i + 2 < len(path) and
+               path[i + 2] == path[i] and
+               approx_compass_direction(path[i - 1], path[i + 1]) ==
+               approx_compass_direction(path[i + 1], path[i + 3])):
+            cum_distance += distance(path[i + 1], path[i + 3])
+            i += 2
+
+        tos.append(path[i + 1])
+        the_distances.append(cum_distance)
+        i += 2
+
+    assert len(froms) == len(tos)
+    assert len(the_ways) == len(the_distances)
+    assert len(froms) == len(the_distances)
+
+    for from_id, to_id, way_id, the_distance in zip(froms, tos, the_ways, the_distances):
+        print("%d meters %s along %s" % (
+            the_distance,
+            approx_compass_direction(from_id, to_id),
+            ways[way_id].tags))
+
+    print("%d meters long" % path_length)
+
+last_shortest_left = INFINITY
+while nodes_with_possible_exists is not None:
+    current_node_id = get_lowest_estimated_to_target(nodes_with_possible_exists)
+
+    left_from_current_node = distance(current_node_id, target_node_id)
+    if left_from_current_node < last_shortest_left:
+        last_shortest_left = left_from_current_node
+        print("Evaluating (%d meters left):" % left_from_current_node)
+        print_path(start_node_id, current_node_id)
+        #    print(nodes[current_node_id].tags)
+
+    if current_node_id == target_node_id:
+        # DONE!
+        print("Found a route!")
+        print_path(start_node_id, current_node_id)
+        break
+
+    nodes_with_possible_exists.remove(current_node_id)
+    nodes_already_evaluated.add(current_node_id)
+    neighbour_ids = node_neighbours[current_node_id]
+    distance_from_start_current_node_id, _, _, _ = shortest_distance[
+        current_node_id]
     for (neighbour_id, way_id) in neighbour_ids:
-        neighbour = nodes[neighbour_id]
-        # print("%d: %r" % (neighbour_id,
-        #                   distance(node_id, neighbour_id)))
-
-    options = set()
-    for (neighbour_id, way_id) in neighbour_ids:
-        if neighbour_id not in visited:
-            options.add((neighbour_id, way_id))
-
-    if options:
-        (next_node_id, way_id) = random.choice(tuple(options))
-        print("Going %s %d meters via" % (
-            approx_compass_direction(node_id, next_node_id),
-            distance(node_id, next_node_id)))
-        print(ways[way_id].tags)
-
-        node_id = next_node_id
-        visited.add(node_id)
-    else:
-        node_id = None
-
-    time.sleep(1)
-
+        if neighbour_id in nodes_already_evaluated:
+            continue
+        if neighbour_id not in nodes_with_possible_exists:
+            nodes_with_possible_exists.add(neighbour_id)
+        distance_from_start_this_way = distance_from_start_current_node_id + distance(current_node_id, neighbour_id)
+        if neighbour_id in shortest_distance:
+            shortest_dist_from_start_for_neighbour = shortest_distance[neighbour_id][0]
+            if distance_from_start_this_way <= shortest_dist_from_start_for_neighbour:
+                # This is not better.
+                continue
+        # So this is the best so far
+        shortest_distance[neighbour_id] = (distance_from_start_this_way, current_node_id, way_id, distance_from_start_this_way + distance(neighbour_id, target_node_id))
+#        time.sleep(0.05)
