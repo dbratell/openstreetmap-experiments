@@ -3,7 +3,7 @@ import osmread
 import sys
 import time
 
-OSM_FILE = "linkoping.osm"
+OSM_FILE = "linkoping-big.osm"
 # start_time = time.time()
 # data = osmread.parse_file(OSM_FILE)
 # 
@@ -61,12 +61,23 @@ color_per_landuse_type = {
 
 color_per_leisure_type = {
     "park": "green",
+    "dog_park": "green",
     "garden": "green",
     "pitch": "green",
     "playground": "green",
-    "minature_golf": None,
+    "golf_course": "green",
+    "dance": None,
+    "miniature_golf": None,
+    "slipway": None,
+    "stadium": "brown",
+    "fitness_station": None,
+    "water_park": None,
     "nature_reserve": "green",
     "sports_centre": None,
+    "swimming_pool": "blue",
+    "marina": None,
+    "ice_rink": None,
+    "track": None,
     }
 
 color_and_width_per_waterway_type = {
