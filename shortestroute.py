@@ -4,6 +4,7 @@ import sys
 import time
 import geopy
 from geopy.distance import vincenty
+from geopy.distance import great_circle
 import random
 import math
 
@@ -16,6 +17,10 @@ ways = {}
 roads = [] # Only roads that I care about
 rails = [] # Only railroads that I care about
 buildings = []
+
+WALKING = True
+CAR = False
+BIKE = False
 
 color_and_width_per_highway_type = {
     # Normal roads for cars
@@ -138,6 +143,14 @@ for entity in data:
             if highway_type in ("construction", "proposed", "corridor",
                                 "elevator", "bridleway"):
                 continue
+            if not CAR and highway_type in ("motorway", "trunk"):
+                continue
+            if not CAR and not BIKE and highway_type in ("motorway", "trunk", "primary", "secondary"):
+                continue
+            if not WALKING and not BIKE and highway_type in ("cycleway", ):
+                continue
+            if not WALKING and highway_type in ("platform", "footway"):
+                continue
             ways[entity.id] = entity
             way_id = entity.id
             if "area" in entity.tags and entity.tags["area"] == "yes":
@@ -183,16 +196,16 @@ for (neighbour_id, way_id) in node_neighbours[max_local_edge_count_node]:
 def distance(node_1_id, node_2_id):
     node_1 = nodes[node_1_id]
     node_2 = nodes[node_2_id]
-    # vincenty is the most accurate but slower. There is another that
-    # might be 0.5% wrong that we could use instead.
-    dist = vincenty((node_1.lat, node_1.lon),
-                    (node_2.lat, node_2.lon))
+    if False:
+        # vincenty is the most accurate but slower. There is another that
+        # might be 0.5% wrong that we could use instead.
+        dist = vincenty((node_1.lat, node_1.lon),
+                        (node_2.lat, node_2.lon))
+    else:
+        # great_circle is up to 0.5% wrong but about twice as fast.
+        dist = great_circle((node_1.lat, node_1.lon),
+                            (node_2.lat, node_2.lon))
     return dist.meters
-
-start_node = 4796398550L # Westmansgatan 98
-end_node = 4640788458L # Repslagaregatan 21
-
-print("Total raw distance is %d meters" % distance(start_node, end_node))
 
 def closest_way_node(origin_node_id):
     if origin_node_id in node_neighbours:
@@ -207,24 +220,12 @@ def closest_way_node(origin_node_id):
             closest_node_distance = d
     return closest_node_id
 
-start_node_id = closest_way_node(start_node)
-current_node_id = start_node_id
-target_node_id = closest_way_node(end_node)
-print(nodes[end_node])
-print(nodes[target_node_id])
-
-print("Total distance between nodes is %d meters" % distance(current_node_id, target_node_id))
-
-shortest_distance = {} # Map from id to (distance, prev_node, via_way, estimated_to_target)
-
-# Going to implement A*
-
-def get_lowest_estimated_to_target(node_id_list):
+def get_lowest_estimated_to_target(node_id_list, graph_state):
     candidate = None
     candidate_cost = -1
     for node_id in list(node_id_list):
-        if node_id in shortest_distance:
-            estimated_cost_to_target = shortest_distance[node_id][3]
+        if node_id in graph_state:
+            estimated_cost_to_target = graph_state[node_id][3]
         else:
             assert False, "Unreachable? %d" % node_id
             estimated_cost_to_target = INFINITY
@@ -233,25 +234,13 @@ def get_lowest_estimated_to_target(node_id_list):
             candidate_cost = estimated_cost_to_target
     return candidate
 
-visited = set()
-visited.add(current_node_id)
-print(current_node_id)
-shortest_distance[current_node_id] = (0,
-                                      None,
-                                      None,
-                                      distance(current_node_id, target_node_id))
-
-nodes_with_possible_exists = set()
-nodes_with_possible_exists.add(current_node_id)
-nodes_already_evaluated = set()
-
-def print_path(start_node_id, end_node_id):
+def print_path(start_node_id, end_node_id, graph_state):
     path = []
     path.append(end_node_id)
     node_id = end_node_id
     path_length = 0
     while node_id != start_node_id:
-        _, prev_node_id, via_way, _ = shortest_distance[node_id]
+        _, prev_node_id, via_way, _ = graph_state[node_id]
         path.append(via_way)
         path.append(prev_node_id)
         path_length += distance(node_id, prev_node_id)
@@ -297,39 +286,80 @@ def print_path(start_node_id, end_node_id):
 
     print("%d meters long" % path_length)
 
-last_shortest_left = INFINITY
-while nodes_with_possible_exists is not None:
-    current_node_id = get_lowest_estimated_to_target(nodes_with_possible_exists)
+def heuristic_cost(node_1_id, node_2_id):
+    return distance(node_1_id, node_2_id)
 
-    left_from_current_node = distance(current_node_id, target_node_id)
-    if left_from_current_node < last_shortest_left:
-        last_shortest_left = left_from_current_node
-        print("Evaluating (%d meters left):" % left_from_current_node)
-        print_path(start_node_id, current_node_id)
-        #    print(nodes[current_node_id].tags)
+VERBOSE_A_STAR = False
+def a_star_search(start_node, end_node):
+    start_node_id = closest_way_node(start_node)
+    current_node_id = start_node_id
+    target_node_id = closest_way_node(end_node)
 
-    if current_node_id == target_node_id:
-        # DONE!
-        print("Found a route!")
-        print_path(start_node_id, current_node_id)
-        break
+#    print(nodes[end_node])
+#    print(nodes[target_node_id])
 
-    nodes_with_possible_exists.remove(current_node_id)
-    nodes_already_evaluated.add(current_node_id)
-    neighbour_ids = node_neighbours[current_node_id]
-    distance_from_start_current_node_id, _, _, _ = shortest_distance[
-        current_node_id]
-    for (neighbour_id, way_id) in neighbour_ids:
-        if neighbour_id in nodes_already_evaluated:
-            continue
-        if neighbour_id not in nodes_with_possible_exists:
-            nodes_with_possible_exists.add(neighbour_id)
-        distance_from_start_this_way = distance_from_start_current_node_id + distance(current_node_id, neighbour_id)
-        if neighbour_id in shortest_distance:
-            shortest_dist_from_start_for_neighbour = shortest_distance[neighbour_id][0]
-            if distance_from_start_this_way <= shortest_dist_from_start_for_neighbour:
-                # This is not better.
+    print("Total distance between nodes is %d meters" % distance(current_node_id, target_node_id))
+
+    graph_state = {} # Map from id to (cost, prev_node, via_way, estimated_cost_to_target)
+
+    # Going to implement A*
+    visited = set()
+    visited.add(current_node_id)
+    print(current_node_id)
+    graph_state[current_node_id] = (
+        0,
+        None,
+        None,
+        heuristic_cost(current_node_id, target_node_id))
+
+    nodes_with_possible_exits = set()
+    nodes_with_possible_exits.add(current_node_id)
+    nodes_already_evaluated = set()
+    if VERBOSE_A_STAR:
+        last_shortest_left = INFINITY
+    while nodes_with_possible_exits is not None:
+        current_node_id = get_lowest_estimated_to_target(nodes_with_possible_exits, graph_state)
+
+        if VERBOSE_A_STAR:
+            left_from_current_node = heuristic_cost(current_node_id, target_node_id)
+            if left_from_current_node < last_shortest_left:
+                last_shortest_left = left_from_current_node
+                print("Evaluating (%d meters left):" % left_from_current_node)
+                print_path(start_node_id, current_node_id, graph_state)
+                #    print(nodes[current_node_id].tags)
+
+        if current_node_id == target_node_id:
+            # DONE!
+            print("Found a route!")
+            print_path(start_node_id, current_node_id, graph_state)
+            return
+
+        nodes_with_possible_exits.remove(current_node_id)
+        nodes_already_evaluated.add(current_node_id)
+        neighbour_ids = node_neighbours[current_node_id]
+        distance_from_start_current_node_id = graph_state[current_node_id][0]
+        for (neighbour_id, way_id) in neighbour_ids:
+            if neighbour_id in nodes_already_evaluated:
                 continue
-        # So this is the best so far
-        shortest_distance[neighbour_id] = (distance_from_start_this_way, current_node_id, way_id, distance_from_start_this_way + distance(neighbour_id, target_node_id))
-#        time.sleep(0.05)
+            if neighbour_id not in nodes_with_possible_exits:
+                nodes_with_possible_exits.add(neighbour_id)
+            cost_from_start_this_way = distance_from_start_current_node_id + distance(current_node_id, neighbour_id)
+            if neighbour_id in graph_state:
+                lowest_cost_from_start_for_neighbour = graph_state[neighbour_id][0]
+                if cost_from_start_this_way <= lowest_cost_from_start_for_neighbour:
+                    # This is not better.
+                    continue
+            # So this is the best so far
+            graph_state[neighbour_id] = (
+                cost_from_start_this_way,
+                current_node_id,
+                way_id,
+                cost_from_start_this_way + heuristic_cost(neighbour_id, target_node_id))
+    #        time.sleep(0.05)
+
+start_node = 4796398549L # Westmansgatan 98
+end_node = 4640788458L # Repslagaregatan 21
+
+print("Total raw distance is %d meters" % distance(start_node, end_node))
+
+a_star_search(start_node, end_node)
