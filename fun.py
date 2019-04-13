@@ -3,7 +3,7 @@ import osmread
 import sys
 import time
 
-OSM_FILE = "linkoping-big.osm"
+OSM_FILE = "linkoping.osm"
 # start_time = time.time()
 # data = osmread.parse_file(OSM_FILE)
 # 
